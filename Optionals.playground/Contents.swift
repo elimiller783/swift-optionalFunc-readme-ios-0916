@@ -48,3 +48,16 @@ func produceFullName(withFirstName firstName: String, middleName: String?, lastN
 
 produceFullName(withFirstName: "Jon", middleName: "Bon", lastName: "Jovi")
 produceFullName(withFirstName: "Mary", middleName: nil, lastName: "Doe")
+
+
+func carMake(year: Int?, make: String, model: String) -> String {
+    var carDetail = make
+    if let year = year {
+     carDetail = "\(year) \(make) \(model)"
+    } else {
+    carDetail = "\(make) \(model)"
+    }
+        return carDetail
+}
+
+carMake(2009, make: "subaru", model: "wrx")
